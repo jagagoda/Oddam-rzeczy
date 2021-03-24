@@ -1,0 +1,36 @@
+@import "../main";
+
+.columns__section {
+  background-image: url("../../assets/column-background.png");
+  background-position: top;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  .column {
+    display: inline-block;
+    text-align: center;
+    color: $color-base-font;
+    h2 {
+      font-size: 5.6rem;
+      color: $color-dark-green;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      text-transform: uppercase;
+      text-wrap: normal;
+    }
+    p{
+      font-size: 1rem;
+      font-family: $font-alt;
+      max-width: 21rem;
+      line-height: 2rem;
+      letter-spacing: -0.32px;
+    }
+
+  }
+}
