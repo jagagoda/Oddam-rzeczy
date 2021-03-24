@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import '../../scss/home-page/_header.scss';
+import Deco from "../../assets/decoration.svg";
 
 const Header = () => {
     return (
@@ -16,13 +17,16 @@ const Header = () => {
                     <Link className="menu__link" to="/">Fundacja i organizacje</Link>
                     <Link className="menu__link" to="/">Kontakt</Link>
                 </nav>
-            <section className="hero__container">
-                <div className="hero__text">
-                    <h1>Zacznij pomagać!<br/>Oddaj niechciane rzeczy w zaufane ręce</h1>
-                    <button className="btn btn__hero1">Oddaj rzeczy</button>
-                    <button className="btn btn__hero2">Zorganizuj zbiórkę</button>
-                </div>
-            </section>
+                <section className="hero__container">
+                    <div className="hero__text">
+                        <h1>Zacznij pomagać!<br/>Oddaj niechciane rzeczy w zaufane ręce</h1>
+                        <img src={Deco} alt="dekoracja"/>
+                        <div className="buttons">
+                            <button className="btn btn__hero1">Oddaj rzeczy</button>
+                            <button className="btn btn__hero2">Zorganizuj zbiórkę</button>
+                        </div>
+                    </div>
+                </section>
             </div>
         </header>
 
