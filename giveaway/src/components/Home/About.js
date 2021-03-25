@@ -1,6 +1,5 @@
 import Deco from "../../assets/decoration.svg";
 import Sign from '../../assets/signature.svg';
-import People from '../../assets/people.jpg';
 import '../../scss/home-page/_about.scss';
 
 const About = () => {
