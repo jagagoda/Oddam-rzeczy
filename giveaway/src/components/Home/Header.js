@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import '../../scss/home-page/_header.scss';
 import Deco from "../../assets/decoration.svg";
+import Button from './Button';
 
 const Header = () => {
     return (
@@ -22,8 +23,8 @@ const Header = () => {
                         <h1>Zacznij pomagać!<br/>Oddaj niechciane rzeczy w zaufane ręce</h1>
                         <img src={Deco} alt="dekoracja"/>
                         <div className="buttons">
-                            <button className="btn btn__hero1">Oddaj rzeczy</button>
-                            <button className="btn btn__hero2">Zorganizuj zbiórkę</button>
+                            <Button text='Oddaj rzeczy' />
+                            <Button text='Zorganizuj zbiórkę' />
                         </div>
                     </div>
                 </section>

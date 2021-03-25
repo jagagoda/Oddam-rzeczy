@@ -4,6 +4,7 @@ import Bag from '../../assets/icon2.svg';
 import Loop from '../../assets/icon3.svg';
 import Cycle from '../../assets/icon4.svg';
 import Deco from '../../assets/decoration.svg';
+import Button from "./Button";
 
 const StepsSection = () => {
     return (
@@ -34,8 +35,11 @@ const StepsSection = () => {
                     <p>ubrania, zabawki, sprzęt i inne</p>
                 </div>
             </div>
+            <div className="step__button">
+                <Button text='Oddaj rzeczy'/>
+            </div>
         </section>
     );
-};
+}
 
-export default StepsSection;
+export default StepsSection

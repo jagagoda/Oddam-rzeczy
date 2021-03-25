@@ -1,8 +1,19 @@
+import Deco from "../../assets/decoration.svg";
+import Sign from '../../assets/signature.svg';
+import People from '../../assets/people.jpg';
+import '../../scss/home-page/_about.scss';
+
 const About = () => {
     return (
-        <div>
-            About
-        </div>
+        <section className='about__section'>
+            <div className="about__text">
+                <h1>O nas</h1>
+                <img src={Deco} alt="dekoracja" className="img__deco"/>
+                <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts
+                    black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+                <img src={Sign} alt="podpis" className="img__signature"/>
+            </div>
+        </section>
     );
 };
 
