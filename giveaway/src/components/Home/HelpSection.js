@@ -1,126 +1,57 @@
 import '../../scss/home-page/_help.scss';
 import Deco from "../../assets/decoration.svg";
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import datahelp from '../../../public/datahelp.json';
+import Paginations from "./Paginations";
+import HelpClicks from "./HelpClicks";
 
 const HelpSection = () => {
-    // const [currentFoundation, setCurrentFoundation] = useState(foundations[0]);
-    // const [currentOrganization, setCurrentOrganization] = useState(organizations[0]);
-    // const [currentCollection, setCurrentCollection] = useState(collections[0]);
-    // const [active, setActive] = useState(0);
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const [postsPerPage, setPostsPerPage] = useState(3);
-
-    const All = {
-        foundations: [
-            {
-                name: 'Fundacja "Dbam o zdrowie"',
-                goal: 'Cel i misja: Pomoc osobom znajdującym się w trudnej styuacji życiowej',
-                products: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'
-            },
-            {
-                name: 'Fundacja "Dla dzieci"',
-                goal: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
-                products: 'ubrania, meble, zabawki'
-            },
-            {
-                name: 'Fundacja "Bez domu"',
-                goal: 'Cel i misja: Pomoc dla osób nieposiadających miejsca zamieszkania',
-                products: 'ubrania, jedzenie, ciepłe koce'
-            },
-            {
-                name: 'Fundacja "Dbam o zdrowie"',
-                goal: 'Cel i misja: Pomoc osobom znajdującym się w trudnej styuacji życiowej',
-                products: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'
-            },
-            {
-                name: 'Fundacja "Dla dzieci"',
-                goal: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
-                products: 'ubrania, meble, zabawki'
-            },
-            {
-                name: 'Fundacja "Bez domu"',
-                goal: 'Cel i misja: Pomoc dla osób nieposiadających miejsca zamieszkania',
-                products: 'ubrania, jedzenie, ciepłe koce'
-            },
-            {
-                name: 'Fundacja "Dbam o zdrowie"',
-                goal: 'Cel i misja: Pomoc osobom znajdującym się w trudnej styuacji życiowej',
-                products: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'
-            },
-            {
-                name: 'Fundacja "Dla dzieci"',
-                goal: 'Cel i misja: Pomoc dzieciom z ubogich rodzin',
-                products: 'ubrania, meble, zabawki'
-            },
-            {
-                name: 'Fundacja "Bez domu"',
-                goal: 'Cel i misja: Pomoc dla osób nieposiadających miejsca zamieszkania',
-                products: 'ubrania, jedzenie, ciepłe koce'
-            },
-        ],
-        organizations: [
-            {
-                name: 'Organizacja “Lorem Ipsum 1”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-            {
-                name: 'Organizacja “Lorem Ipsum 2”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-            {
-                name: 'Organizacja “Lorem Ipsum 3”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-            {
-                name: 'Organizacja “Lorem Ipsum 4”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-            {
-                name: 'Organizacja “Lorem Ipsum 5”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-            {
-                name: 'Organizacja “Lorem Ipsum 6”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-        ],
-        collections: [
-            {
-            name: 'Zbiórka “Lorem Ipsum 1”',
-            goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-            products: 'Egestas, sed, tempus'
-        },
-            {
-                name: 'Zbiórka “Lorem Ipsum 2”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-            {
-                name: 'Zbiórka “Lorem Ipsum 3”',
-                goal: 'Quis varius quam quisque id diam vel quam elementum pulvinar.',
-                products: 'Egestas, sed, tempus'
-            },
-
-        ]
+    const [data, setData] = useState("foundation");
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage, setPostsPerPage] = useState(3);
+    const pagination = (page) => {
+        setData(page.target.dataset.info)
+        setCurrentPage(1)
     }
+    let fund = datahelp.filter((el => el.category === data))
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = fund.slice(indexOfFirstPost, indexOfLastPost)
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
+    const helpTitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+
+    const getData = () => {
+        fetch('data.json'
+        , {
+                headers : {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+        )
+            .then(function(response){
+                console.log(response)
+                return response.json();
+            })
+            .then(function(myJson) {
+                console.log(myJson);
+                setData(myJson)
+            });
+    }
+    useEffect(()=>{
+        getData()
+    },[])
 
     return (
         <section className="help__section">
             <div className="help__header">
-                <h1>Komu pomagamy?</h1>
-                <img src={Deco} alt="dekoracja" className="img__deco"/>
+                <h1>Who do we help?</h1>
+                <img src={Deco} alt="dekoracja" className="img__deco" />
             </div>
             <div className="help__columns">
-                <button className="help__btn">Fundacjom</button>
-                <button className="help__btn">Organizacjom<br/> pozarządowym</button>
-                <button className="help__btn">Lokalnym<br/> zbiórkom</button>
+                <HelpClicks clicker={pagination} className="help__btn" />
             </div>
+            <Paginations postsPerPage={postsPerPage} totalPosts={fund.length} paginate={paginate} currentPage={currentPage}/>
         </section>
     );
 };
