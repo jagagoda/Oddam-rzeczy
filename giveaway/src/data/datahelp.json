@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Foundation Lorem ipsum 1",
+    "goal": "Helping people in difficult situations",
+    "products": "clothes, food, household appliances, furnitures, toys",
+    "category": "foundation"
+  },
+  {
+    "id": 2,
+    "name": "Foundation Lorem ipsum 2",
+    "goal": "helping children from poor families",
+    "products": "clothes, furnitures, toys",
+    "category": "foundation"
+  },
+  {
+    "id": 3,
+    "name": "Foundation Lorem ipsum 3",
+    "goal": "Helping homeless people",
+    "products": "clothes, food, blankets",
+    "category": "foundation"
+  },
+  {
+    "id": 4,
+    "name": "Foundation Lorem ipsum 4",
+    "goal": "Praesent efficitur ex vel porttitor imperdiet. In hac habitasse platea dictumst",
+    "products": "Egestas, sed, tempus",
+    "category": "foundation"
+  },
+  {
+    "id": 5,
+    "name": "Foundation Lorem ipsum 5",
+    "goal": "Praesent efficitur ex vel porttitor imperdiet. In hac habitasse platea dictumst",
+    "products": "Egestas, sed, tempus",
+    "category": "foundation"
+  },
+  {
+    "id": 6,
+    "name": "Foundation Lorem ipsum 6",
+    "goal": "Praesent efficitur ex vel porttitor imperdiet. In hac habitasse platea dictumst",
+    "products": "Egestas, sed, tempus",
+    "category": "foundation"
+  },
+  {
+    "id": 7,
+    "name": "Foundation Lorem ipsum 7",
+    "goal": "Praesent efficitur ex vel porttitor imperdiet. In hac habitasse platea dictumst",
+    "products": "Egestas, sed, tempus",
+    "category": "foundation"
+  },
+  {
+    "id": 8,
+    "name": "Foundation Lorem ipsum 8",
+    "goal": "Praesent efficitur ex vel porttitor imperdiet. In hac habitasse platea dictumst",
+    "products": "Egestas, sed, tempus",
+    "category": "foundation"
+  },
+  {
+    "id": 9,
+    "name": "Foundation Lorem ipsum 9",
+    "goal": "Praesent efficitur ex vel porttitor imperdiet. In hac habitasse platea dictumst",
+    "products": "Egestas, sed, tempus",
+    "category": "foundation"
+  },
+  {
+    "id": 10,
+    "name": "Organization “Lorem Ipsum 1”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "organization"
+  },
+  {
+    "id": 11,
+    "name": "Organization “Lorem Ipsum 2”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "organization"
+  },
+  {
+    "id": 12,
+    "name": "Organization “Lorem Ipsum 3”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "organization"
+  },
+  {
+    "id": 13,
+    "name": "Organization “Lorem Ipsum 4”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "organization"
+  },
+  {
+    "id": 14,
+    "name": "Organization “Lorem Ipsum 5”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "organization"
+  },
+  {
+    "id": 15,
+    "name": "Organization “Lorem Ipsum 6”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "organization"
+  },
+  {
+    "id": 16,
+    "name": "Collection “Lorem Ipsum 1”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "collection"
+  },
+  {
+    "id": 17,
+    "name": "Collection “Lorem Ipsum 2”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "collection"
+  },
+  {
+    "id": 18,
+    "name": "Collection “Lorem Ipsum 3”",
+    "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+    "products": "Egestas, sed, tempus",
+    "category": "collection"
+  }
+]

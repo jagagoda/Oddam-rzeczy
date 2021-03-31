@@ -1,7 +1,7 @@
 import '../../scss/home-page/_help.scss';
 import Deco from "../../assets/decoration.svg";
 import React, {useState, useEffect} from 'react';
-import datahelp from '../../../public/datahelp.json';
+import datahelp from '../../data/datahelp.json';
 import Paginations from "./Paginations";
 import HelpClicks from "./HelpClicks";
 
