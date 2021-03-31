@@ -10,33 +10,33 @@ const StepsSection = () => {
     return (
         <section className="steps__section">
             <div className="steps__text">
-                <p>Wystarczą 4 proste kroki</p>
-                <img src={Deco} alt="dekoracja"/>
+                <p>It is only 4 steps!</p>
+                <img src={Deco} alt="decoration"/>
             </div>
             <div className="steps__icon">
                 <div className="icon">
-                    <img src={Shirt} alt="ikona ubrania"/>
-                    <h4>Wybierz rzeczy</h4>
-                    <p>ubrania, zabawki, sprzęt i inne</p>
+                    <img src={Shirt} alt="cloth icon"/>
+                    <h4>Pick things</h4>
+                    <p>clothes, toys, accessories and other</p>
                 </div>
                 <div className="icon">
-                    <img src={Bag} alt="ikona worka na śmieci"/>
-                    <h4>Wybierz rzeczy</h4>
-                    <p>ubrania, zabawki, sprzęt i inne</p>
+                    <img src={Bag} alt="trash bag icon"/>
+                    <h4>Pack things</h4>
+                    <p>use the trash bags</p>
                 </div>
                 <div className="icon">
                     <img src={Loop} alt="ikona lupy"/>
-                    <h4>Wybierz rzeczy</h4>
-                    <p>ubrania, zabawki, sprzęt i inne</p>
+                    <h4>Decide who to help</h4>
+                    <p>choose a trusted place</p>
                 </div>
                 <div className="icon">
                     <img src={Cycle} alt="ikona cyklu"/>
-                    <h4>Wybierz rzeczy</h4>
-                    <p>ubrania, zabawki, sprzęt i inne</p>
+                    <h4>Order a courier</h4>
+                    <p>you can choose most suitable date for you</p>
                 </div>
             </div>
             <div className="step__button">
-                <Button text='Oddaj rzeczy'/>
+                <Button text='Giveaway things'/>
             </div>
         </section>
     );

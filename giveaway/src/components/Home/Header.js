@@ -8,23 +8,23 @@ const Header = () => {
         <header className="header">
             <div className="header__container">
                 <nav className="login__container">
-                    <Link className="menu__link-log" to="/logowanie">Zaloguj</Link>
-                    <Link className="menu__link-log" to="/rejestracja">Załóż konto</Link>
+                    <Link className="menu__link-log" to="/logging">Sign in</Link>
+                    <Link className="menu__link-log" to="/registration">Sign up</Link>
                 </nav>
                 <nav className="menu__container">
                     <Link className="menu__link" to="/">Start</Link>
-                    <Link className="menu__link" to="/about">O co chodzi?</Link>
-                    <Link className="menu__link" to="/">O nas</Link>
-                    <Link className="menu__link" to="/">Fundacja i organizacje</Link>
-                    <Link className="menu__link" to="/">Kontakt</Link>
+                    <Link className="menu__link" to="/about">What is it about?</Link>
+                    <Link className="menu__link" to="/">About us</Link>
+                    <Link className="menu__link" to="/">Foundations and organizations</Link>
+                    <Link className="menu__link" to="/">Contact</Link>
                 </nav>
                 <section className="hero__container">
                     <div className="hero__text">
-                        <h1>Zacznij pomagać!<br/>Oddaj niechciane rzeczy w zaufane ręce</h1>
-                        <img src={Deco} alt="dekoracja"/>
+                        <h1>Start to help!<br/>Giveaway unwanted stuff</h1>
+                        <img src={Deco} alt="decoration"/>
                         <div className="buttons">
-                            <Button text='Oddaj rzeczy' />
-                            <Button text='Zorganizuj zbiórkę' />
+                            <Button text='Giveaway things' />
+                            <Button text='Organize a collection' />
                         </div>
                     </div>
                 </section>
