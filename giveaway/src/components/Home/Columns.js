@@ -1,22 +1,12 @@
 import '../../scss/home-page/_columns.scss';
+import Column from "../molecules/Column";
+
 const Columns = () => {
     return (
         <section className="columns__section">
-            <div className="column">
-                <h2>10</h2>
-                <h3>Given away bags</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
-            </div>
-            <div className="column">
-                <h2>5</h2>
-                <h3>Supported organizations</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
-            </div>
-            <div className="column">
-                <h2>7</h2>
-                <h3>Organized collections</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
-            </div>
+            <Column number='10' title='Donated bags' />
+            <Column number='5' title='Supported organizations' />
+            <Column number='7' title='Organized collections' />
         </section>
     );
 };

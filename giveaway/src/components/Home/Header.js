@@ -1,11 +1,13 @@
 import {Link} from "react-router-dom";
 import '../../scss/home-page/_header.scss';
-import Deco from "../../assets/decoration.svg";
-import Button from './Button';
+import Button from '../molecules/Button';
+import Title from "../molecules/Title";
 
-const Header = () => {
+const Header = ({to}) => {
     return (
         <header className="header">
+            <ul className='navbar__container'>
+                <li className='navbar'>
             <div className="header__container">
                 <nav className="login__container">
                     <Link className="menu__link-log" to="/logging">Sign in</Link>
@@ -20,15 +22,13 @@ const Header = () => {
                 </nav>
                 <section className="hero__container">
                     <div className="hero__text">
-                        <h1>Start to help!<br/>Giveaway unwanted stuff</h1>
-                        <img src={Deco} alt="decoration"/>
-                        <div className="buttons">
-                            <Button text='Give away things' />
-                            <Button text='Organize a collection' />
-                        </div>
+                        <Title mainText='Start to help!' text='Give away unwanted stuff' />
+                            <Button to={to} text='Give away things' />
+                            <Button to={to} text='Organize a collection' />
                     </div>
                 </section>
             </div>
+            </ul>
         </header>
 
     );

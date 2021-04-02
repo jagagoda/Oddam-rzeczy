@@ -39,6 +39,7 @@
 
     &:hover {
       border: 0.75px solid $color-base-yellow;
+      transition: 0.4s;
     }
   }
 
@@ -54,6 +55,7 @@
 
     &:hover {
       border: 0.75px solid $color-light-grey;
+      transition: 0.4s;
     }
   }
 }

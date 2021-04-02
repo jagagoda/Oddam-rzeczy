@@ -1,12 +1,14 @@
 import '../../scss/home-page/_button.scss';
+import { Link } from 'react-router-dom';
 
-const Button = ({text, onClick}) => {
+const Button = ({text, onClick, to}) => {
     return (
-        <button
+        <Link
+            to={to}
             onClick={onClick}
             className='btn'>
             {text}
-        </button>
+        </Link>
     );
 };
 export default Button;
