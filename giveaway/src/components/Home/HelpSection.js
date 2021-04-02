@@ -20,27 +20,6 @@ const HelpSection = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
     const helpTitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 
-    const getData = () => {
-        fetch('data.json'
-        , {
-                headers : {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-            .then(function(response){
-                console.log(response)
-                return response.json();
-            })
-            .then(function(myJson) {
-                console.log(myJson);
-                setData(myJson)
-            });
-    }
-    useEffect(()=>{
-        getData()
-    },[])
 
     return (
         <section className="help__section">
@@ -51,6 +30,7 @@ const HelpSection = () => {
             <div className="help__columns">
                 <HelpClicks clicker={pagination} className="help__btn" />
             </div>
+            <h1>{data.name}</h1>
             <Paginations postsPerPage={postsPerPage} totalPosts={fund.length} paginate={paginate} currentPage={currentPage}/>
         </section>
     );

@@ -1,16 +1,10 @@
 @import "../main";
-.text__section {
-  .h1 {
-    font-size: 2.4rem;
-    text-align: center;
-    color: $color-base-font;
-  }
-}
-.contact__section {
+
+.contact__form {
   overflow: hidden;
   position: relative;
   width: 100%;
-  min-height: 64rem;
+  height: 100vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -19,7 +13,7 @@
     content: "";
     background-image: url("../../assets/background-contact-form.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     opacity: 0.3;
     top: 0;
     left: 0;
@@ -30,26 +24,88 @@
   }
 
   form {
-    margin-right: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 17rem;
 
-    .data__info {
+    .bottom__form {
       display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      img {
+        margin-bottom: 2.5rem;
+      }
     }
 
     label {
+      color: $color-base-font;
       display: flex;
       flex-direction: column;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
 
     input {
+      padding: 1rem;
       border: none;
-      border-bottom: 1px solid $color-base-font;
-
+      border-bottom: 2px solid $color-strong-light-grey;
     }
 
     textarea {
       border: none;
-      border-bottom: 1px solid $color-base-font;
+      border-bottom: 2px solid $color-strong-light-grey;
+      min-height: 7rem;
+    }
+
+    .form__message {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+
+      button {
+        background-color: transparent;
+        border: 0.75px solid $color-base-font;
+        color: $color-black;
+        font-size: 1rem;
+        text-align: center;
+        min-width: 8rem;
+        padding: 1rem 2rem;
+        min-height: 3.1rem;
+        border-radius: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(0, 135%);
+
+      }
     }
   }
+}
+
+.form__data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  .form__name {
+    margin-right: 4rem;
+  }
+
+  .form__email {
+    margin-left: 4rem;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
 }

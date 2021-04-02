@@ -1,4 +1,5 @@
 import HelpSingle from "./HelpSingle";
+import datahelp from '../../data/datahelp.json'
 
 const Help = ({HelpTitle, state}) => {
     return (

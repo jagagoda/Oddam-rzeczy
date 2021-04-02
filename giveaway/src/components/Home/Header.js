@@ -23,7 +23,7 @@ const Header = () => {
                         <h1>Start to help!<br/>Giveaway unwanted stuff</h1>
                         <img src={Deco} alt="decoration"/>
                         <div className="buttons">
-                            <Button text='Giveaway things' />
+                            <Button text='Give away things' />
                             <Button text='Organize a collection' />
                         </div>
                     </div>
