@@ -1,5 +1,4 @@
-import HelpSingle from "./HelpSingle";
-import datahelp from '../../data/datahelp.json'
+import HelpSingle from "../molecules/HelpSingle";
 
 const Help = ({HelpTitle, state}) => {
     return (
@@ -12,7 +11,6 @@ const Help = ({HelpTitle, state}) => {
                     </div>
                 )
             })}
-
         </div>
     )
 }

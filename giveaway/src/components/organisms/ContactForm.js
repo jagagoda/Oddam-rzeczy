@@ -47,7 +47,7 @@ const ContactForm = () => {
 
     return (
         <>
-        <section className='contact__form'>
+        <section className='contact__form' id='contact'>
             <form onSubmit={formik.handleSubmit}>
                 <div className="bottom__form">
                     <h1>Contact us!</h1>

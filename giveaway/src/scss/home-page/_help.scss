@@ -1,14 +1,120 @@
 @import "../main";
 
-.help__section {
-  min-height: 54rem;
-  .help__header {
-    h1{
+.help__container {
+  color: $color-medium-grey;
+  font-family: $font-base;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .title {
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    color: $color-base-font;
+    h2 {
+      padding-bottom: 1rem;
+    }
+
+  }
+
+  .help__clicks {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2em;
+    cursor: pointer;
+    .btn__help {
+      background-color: $color-white;
+      color: $color-base-font;
+      font-size: 1.5em;
+      border: 0.75px solid $color-base-font;
+      padding: 1rem;
+      min-width: 13rem;
+      height: 4.9rem;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        border: 0.75px solid $color-base-yellow;
+        transition: 0.4s;
+      }
     }
   }
-  .help__columns {
-    .help__btn {
-      ;
+
+  .help {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+      font-size: 22px;
+
+      max-width: 40%;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    .help__single {
+      font-size: 18px;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $color-medium-grey;
+      padding: 1em;
+
+      &:last-child {
+        border: none;
+      }
+
+      .help__single-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        h3 {
+          font-size: 26px;
+        }
+
+        p {
+        }
+      }
+
+      .help__single-what {
+        font-size: 14px;
+      }
     }
   }
+
+  .page__clicks {
+    margin-top: 1em;
+    .help__pagination {
+      display: flex;
+      gap: 1em;
+      .help__pagination-item {
+        padding: 0.3em;
+
+        cursor: pointer;
+        .help__pagination-link {
+
+        }
+      }
+    }
+  }
+}
+
+.active {
+  border: 1px solid $color-light-grey;
+  padding: 0.3em;
+  cursor: pointer;
+  transition: 0.1s;
+
 }

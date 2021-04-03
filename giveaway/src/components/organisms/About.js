@@ -1,10 +1,10 @@
 import Sign from '../../assets/signature.svg';
 import '../../scss/home-page/_about.scss';
-import Title from "../molecules/Title";
+import Title from "../atoms/Title";
 
 const About = () => {
     return (
-        <section className='about__section'>
+        <section className='about__section' id='about'>
             <div className="about__text">
                 <Title mainText='About us' />
                 <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts
