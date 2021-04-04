@@ -9,22 +9,27 @@
     width: 100%;
     min-height: 60rem;
   }
+
   .nav {
     display: flex;
     flex-direction: column;
     gap: 1em;
     margin: 2rem 6rem 0 2rem;
+
     .login__bar {
       font-size: 0.9rem;
       display: flex;
       justify-content: flex-end;
+
       .login__bar-item {
         padding: 0.3em;
         cursor: pointer;
+
         a {
           padding: 5px 10px;
           text-decoration: none;
           color: $color-light-grey;
+
           &:hover {
             border-bottom: 0.5px solid $color-base-yellow;
             transition: 0.2s;
@@ -39,16 +44,20 @@
       font-size: 1.12rem;
       color: $color-base-font;
       margin-left: 0.5rem;
+
       .navbar__item {
         border: 0.75px solid transparent;
         padding: 0.5rem 1rem;
         cursor: pointer;
+
         &:hover {
           border: 0.75px solid $color-base-yellow;
           transition: 0.4s;
         }
+
         &:first-child {
           border: 0.75px solid $color-base-font;
+
           &:hover {
             border: 0.75px solid $color-base-yellow;
             transition: 0.3s;
@@ -88,23 +97,6 @@
       }
     }
   }
-
-  .hero__container {
-    width: 100%;
-    height: 85vh;
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-    position: relative;
-
-    .hero__text {
-      display: inline-block;
-      z-index: 10;
-      font-size: 2.4rem;
-      letter-spacing: 0.2px;
-      line-height: 3.5rem;
-      margin-top: 12rem;
-      margin-right: 17rem;
-    }
-  }
 }
+
+
