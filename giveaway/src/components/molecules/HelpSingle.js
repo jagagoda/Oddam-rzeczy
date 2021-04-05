@@ -1,11 +1,11 @@
-const HelpSingle = ({name, target, products}) => {
+const HelpSingle = ({name, goal, products}) => {
     return (
         <>
             <div className="help__single-details">
                 <h3>{name}</h3>
-                <p>{target}</p>
+                <p>{goal}</p>
             </div>
-            <div className="help__single-what">
+            <div className="help__single-product">
                 {products}
             </div>
         </>

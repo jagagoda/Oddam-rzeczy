@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import fire from "../templates/Fire";
 import LoginForm from "../organisms/LoginForm";
+import Logout from "../atoms/Logout";
 
 const Auth = () => {
     const [user, setUser] = useState('');
@@ -43,7 +44,7 @@ const Auth = () => {
             .auth()
             .createUserWithEmailAndPassword(email, password)
             .catch((err) => {
-                switch (err.code){
+                switch (err.code) {
                     case "auth/email-already-in-use":
                     case "auth/invalid-email":
                         setEmailError(err.message);
@@ -53,7 +54,7 @@ const Auth = () => {
                         break;
                 }
             });
-    }
+    };
     const handleLogOut = () => {
         fire.auth().signOut();
     };
@@ -72,22 +73,25 @@ const Auth = () => {
     },[])
 
     return (
-        <div>
-            <LoginForm
-                email={email}
-                setEmail={setEmail}
-                password={password}
-                setPassword={setPassword}
-                handleLogin={handleLogin}
-                handleSignUp={handleSignUp}
-                hasAccount={hasAccount}
-                setHasAccount={setHasAccount}
-                emailError={emailError}
-                passwordError={passwordError}
-
-            />
+        <div className="auth">
+            {user ? (
+                <Logout handleLogout={handleLogOut} />
+            ) : (
+                    <LoginForm
+                        email={email}
+                        setEmail={setEmail}
+                        password={password}
+                        setPassword={setPassword}
+                        handleLogin={handleLogin}
+                        handleSignUp={handleSignUp}
+                        hasAccount={hasAccount}
+                        setHasAccount={setHasAccount}
+                        emailError={emailError}
+                        passwordError={passwordError}
+                    />
+                )};
         </div>
     );
-};
+}
 
 export default Auth;

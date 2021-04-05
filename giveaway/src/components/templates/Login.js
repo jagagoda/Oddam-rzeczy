@@ -1,16 +1,19 @@
 import React from 'react';
 import '../../scss/login-page/_login.scss';
 import LoginForm from "../organisms/LoginForm";
-import Header from "../organisms/Header";
+import NavBar from "../molecules/NavBar";
+import LoginBar from "../molecules/LoginBar";
+import SignUp from "../molecules/SignUp";
 
 const Login = () => {
     return (
-        <>
         <section className="login__section">
-            <Header />
+            <>
+            <LoginBar />
+            <NavBar />
             <LoginForm />
+            </>
         </section>
-        </>
     );
 };
 

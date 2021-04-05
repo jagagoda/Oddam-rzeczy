@@ -7,7 +7,10 @@ const Help = ({HelpTitle, state}) => {
             {state.map(el => {
                 return (
                     <div className="help__single" key={el.id}>
-                        <HelpSingle name={el.name} target={el.goal} what={el.products}/>
+                        <HelpSingle
+                            name={el.name}
+                            goal={el.goal}
+                            products={el.products}/>
                     </div>
                 )
             })}

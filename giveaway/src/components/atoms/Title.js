@@ -1,5 +1,6 @@
 import React from 'react';
 import Deco from '../../assets/decoration.svg';
+import '../../scss/home-page/_title.scss';
 
 const Title = ({ mainText, text }) => {
     return (

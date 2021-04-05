@@ -1,7 +1,7 @@
-import Deco from "../../assets/decoration.svg";
 import '../../scss/home-page/_contact.scss';
 import React from "react";
 import {useFormik} from "formik";
+import Title from "../atoms/Title";
 
 
 const ContactForm = () => {
@@ -49,10 +49,7 @@ const ContactForm = () => {
         <>
         <section className='contact__form' id='contact'>
             <form onSubmit={formik.handleSubmit}>
-                <div className="bottom__form">
-                    <h1>Contact us!</h1>
-                    <img src={Deco} alt="decoration"/>
-                </div>
+              <Title mainText='Contact us' />
                 <div className="form__data">
                     <div className="form__name">
                         <label htmlFor="name">Enter your name</label>

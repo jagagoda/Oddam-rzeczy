@@ -1,5 +1,5 @@
 
-const HelpPageButton = ({paginate, number, currentPage}) => {
+const HelpPageNumber = ({paginate, number, currentPage}) => {
     let clsName = 'help__pagination-link';
 
     if (number === currentPage) {
@@ -13,4 +13,4 @@ const HelpPageButton = ({paginate, number, currentPage}) => {
         </li>
     )
 }
-export default HelpPageButton
+export default HelpPageNumber

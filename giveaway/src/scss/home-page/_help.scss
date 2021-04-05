@@ -19,6 +19,7 @@
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     color: $color-base-font;
+
     h2 {
       padding-bottom: 1rem;
     }
@@ -30,18 +31,20 @@
     gap: 1em;
     margin-bottom: 2em;
     cursor: pointer;
+
     .btn__help {
       background-color: $color-white;
       color: $color-base-font;
       font-size: 1.5em;
-      border: 0.75px solid $color-base-font;
+      border: 0.75px solid transparent;
       padding: 1rem;
       min-width: 13rem;
       height: 4.9rem;
       outline: none;
       cursor: pointer;
+
       &:hover {
-        border: 0.75px solid $color-base-yellow;
+        border: 0.75px solid $color-base-font;
         transition: 0.4s;
       }
     }
@@ -88,7 +91,7 @@
         }
       }
 
-      .help__single-what {
+      .help__single-product {
         font-size: 14px;
       }
     }
@@ -96,25 +99,24 @@
 
   .page__clicks {
     margin-top: 1em;
+
     .help__pagination {
       display: flex;
       gap: 1em;
+
       .help__pagination-item {
         padding: 0.3em;
-
         cursor: pointer;
-        .help__pagination-link {
 
+        .help__pagination-link {
+        }
+
+        .active {
+          border: 1px solid $color-light-grey;
+          padding: 0.3em;
+          cursor: pointer;
+          transition: 0.1s;
         }
       }
     }
-  }
-}
-
-.active {
-  border: 1px solid $color-light-grey;
-  padding: 0.3em;
-  cursor: pointer;
-  transition: 0.1s;
-
-}
+  }}

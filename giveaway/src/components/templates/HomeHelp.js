@@ -3,13 +3,13 @@ import HelpClicks from "../molecules/HelpClicks";
 import Help from "../organisms/Help";
 import {useState} from "react";
 import datahelp from "../../data/datahelp.json";
-import HelpPageBtns from "../molecules/HelpPageBtns";
 import '../../scss/home-page/_help.scss';
+import HelpPagination from "../molecules/HelpPagination";
 
 const HomeHelp = () => {
-    let [data, setData] = useState("funds");
+    let [data, setData] = useState("foundation");
     let [currentPage, setCurrentPage] = useState(1);
-    let [postsPerPage, setPostsPerPage] = useState(3);
+    let [postsPerPage] = useState(3);
 
     const pagination = (el) => {
         setData(el.target.dataset.info)
@@ -27,7 +27,7 @@ const HomeHelp = () => {
             <HelpClicks clicker={pagination}/>
             <Help HelpTitle={helpTitle} state={currentPosts}/>
             <div className="page__clicks">
-                <HelpPageBtns postsPerPage={postsPerPage} totalPosts={filtered.length} paginate={paginate} currentPage={currentPage}/>
+                <HelpPagination postsPerPage={postsPerPage} totalPosts={filtered.length} paginate={paginate} currentPage={currentPage}/>
             </div>
         </section>
     )
