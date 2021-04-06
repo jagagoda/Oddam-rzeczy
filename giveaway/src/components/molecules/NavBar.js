@@ -1,5 +1,5 @@
 import {Link} from 'react-scroll';
-
+import '../../scss/login-page/_login.scss';
 const NavBar = () => {
 
     return (

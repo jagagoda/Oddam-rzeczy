@@ -1,0 +1,15 @@
+@import "../main";
+
+.logout__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logout__button {
+    font-size: 1.1em;
+    padding: 0 1em;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+
+  }
+}

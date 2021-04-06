@@ -1,0 +1,50 @@
+@import "../main";
+
+.signup__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .form__inputs {
+    background-color: $color-background-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+
+    label {
+      font-size: 1em;
+    }
+    input {
+      padding: 0.5rem 2rem;
+      background-color: $color-background-grey;
+      border: none;
+      border-bottom: 1px solid $color-base-font;
+      width: 60%;
+      text-align: center;
+      .invalid {
+        font-size: 0.5em;
+        color: red;
+      }
+    }
+  }
+}
+.signup__buttons {
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  .signup__btn {
+    font-size: 1.1em;
+    padding: 1rem 2rem;
+    background-color: $color-white;
+    border: none;
+    outline: none;
+    &:last-child {
+      border: 0.75px solid $color-base-font;
+    }
+  }
+}

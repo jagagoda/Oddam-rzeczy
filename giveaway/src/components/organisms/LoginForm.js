@@ -3,12 +3,22 @@ import Title from "../atoms/Title";
 import {Formik, Form} from 'formik';
 import {TextInput} from "../atoms/FormLib";
 import * as Yup from 'yup';
+import LoginBar from "../molecules/LoginBar";
+import NavBar from "../molecules/NavBar";
+import '../../scss/home-page/_signup.scss';
 
-const LoginForm = () => {
+import { connect } from 'react-redux';
+import { loginUser } from "../templates/auth/actions/userActions";
+import { useHistory } from 'react-router-dom';
+
+const LoginForm = ({loginUser}) => {
+    const history = useHistory();
     return (
-        <section className='login__form'>
+        <section className='form'>
+            <LoginBar />
+            <NavBar />
                 <Title mainText="Login"/>
-                <div className='login__form'>
+                <div className='signup__form'>
                     <Formik
                         initialValues={{
                             email: "",
@@ -24,12 +34,13 @@ const LoginForm = () => {
                                     .required("Required"),
                             })
                         }
-                        onSubmit={(values, {setSubmitting}) => {
+                        onSubmit={(values, {setSubmitting, setFieldError}) => {
                             console.log(values);
+                            loginUser(values, history, setFieldError, setSubmitting)
                         }}
                     >
-                        <Form>
-                            <>
+                        {({isSubmitting}) => (
+                        <Form className="form__inputs">
                             <TextInput
                                 name="email"
                                 type="text"
@@ -43,60 +54,16 @@ const LoginForm = () => {
                                 label="password"
                                 placeholder="*********"
                             />
-                            </>
-                            <div className="login__buttons">
-                                <button to="/" className="btn login__btn">Login</button>
-                                <button to="/signup" className="btn login__btn">Sign up</button>
-                            </div>
-
                         </Form>
                         )}
                     </Formik>
+                    <div className="signup__buttons">
+                        <button type="submit"  className="signup__btn">Sign up</button>
+                        <button type="submit"  className="signup__btn">Login</button>
+                    </div>
                 </div>
         </section>
     );
 };
 
-export default LoginForm;
-
-// const LoginForm = ({email, setEmail, password, setPassword, handleLogin, handleSignUp, hasAccount, setHasAccount, emailError, passwordError}) => {
-//     return (
-//         <section className='login'>
-//             <Title mainText='Login' />
-//             <div className="login__container">
-//                 <label className="user__name">Email</label>
-//                 <input
-//                     type="text"
-//                     autoFocus
-//                     required
-//                     value={email}
-//                     onChange={(e) => setEmail(e.target.value)}
-//                 />
-//                 <p className="errorMsg">{emailError}</p>
-//                 <label className="password">Password</label>
-//                 <input
-//                     type="password"
-//                     required
-//                     value={password}
-//                     onChange={(e) => setPassword(e.target.value)}
-//                 />
-//                 <p className="errorMsg">{passwordError}</p>
-//             </div>
-//                 <div className='btn__container'>
-//                     {hasAccount ? (
-//                         <>
-//                         <button onClick={handleLogin}>Sign in</button>
-//                                 <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
-//                         </>
-//                     ) : (
-//                         <>
-//                             <button onClick={handleSignUp}>Sign up</button>
-//                                 <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span>
-//                         </>
-//                     )}
-//                 </div>
-//         </section>
-//     );
-// };
-//
-// export default LoginForm
+export default connect(null, {loginUser})(LoginForm);

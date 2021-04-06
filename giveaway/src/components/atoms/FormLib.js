@@ -8,12 +8,12 @@ export const TextInput = ({...props}) => {
     return (
         <>
             <label htmlFor={props.name}>{props.label}</label>
-            {props.type !== "password" &&
+            {props.type !== "password" && (
             <input
                 invalid={meta.touched && meta.error}
                 {...field}
                 {...props}
-            />}
+            />)}
             {props.type === "password" && (
                 <input
                     invalid={meta.touched && meta.error}
