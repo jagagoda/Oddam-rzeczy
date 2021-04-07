@@ -1,12 +1,11 @@
 @import "../main";
-
 .signup__form {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  
   .form__inputs {
     background-color: $color-background-grey;
     display: flex;
@@ -14,12 +13,19 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 2rem;
+    p{
+      color: red;
+      font-size: 0.8em;
+      padding: 0.5rem;
+    }
 
     label {
       font-size: 1em;
+      margin-bottom: 1rem;
     }
     input {
-      padding: 0.5rem 2rem;
+      font-size: 1rem;
+      padding: 0 2rem;
       background-color: $color-background-grey;
       border: none;
       border-bottom: 1px solid $color-base-font;

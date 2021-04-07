@@ -5,28 +5,33 @@ import SignUp from "./components/molecules/SignUp";
 import Dashboard from "./components/molecules/Dashboard";
 import LoginForm from "./components/organisms/LoginForm";
 import React from "react";
+import {AuthProvider} from "./contexts/AuthContext";
 
 function App() {
-  return (
-      <Router>
-          <section className="login__section">
-              <Switch>
-                  <Route path="/signup">
-                      <SignUp />
-                  </Route>
-                  <Route path="/login">
-                      <LoginForm />
-                  </Route>
-                  <Route path="/dashboard">
-                      <Dashboard />
-                  </Route>
-                  <Route path="/">
-                      <Home />
-                  </Route>
-              </Switch>
-          </section>
-      </Router>
-  );
+    return (
+
+        <Router>
+            <AuthProvider>
+                <section className="login__section">
+                    <Switch>
+                        <Route path="/signup">
+                            <SignUp/>
+                        </Route>
+                        <Route path="/login">
+                            <LoginForm/>
+                        </Route>
+                        <Route path="/dashboard">
+                            <Dashboard/>
+                        </Route>
+                        <Route path="/">
+                            <Home/>
+                        </Route>
+                    </Switch>
+                </section>
+            </AuthProvider>
+        </Router>
+
+    );
 }
 
 export default App;

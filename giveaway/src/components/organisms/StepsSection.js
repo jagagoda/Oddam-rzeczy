@@ -20,7 +20,7 @@ const StepsSection = () => {
                 <Step imgSrc={Cycle} imgAlt="recycle icon" title='Order pick up' text='choose most suitable date for you'/>
             </div>
             <div className="step__button">
-                <Button text='Give away things'/>
+                <Button to="/donate" text='Give away things'/>
             </div>
         </section>
     );

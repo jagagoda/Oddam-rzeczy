@@ -13,8 +13,6 @@
   .nav {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    margin: 2rem 6rem 0 2rem;
 
     .login__bar {
       font-size: 0.9rem;
@@ -43,7 +41,6 @@
       justify-content: flex-end;
       font-size: 1.12rem;
       color: $color-base-font;
-      margin-left: 0.5rem;
 
       .navbar__item {
         border: 0.75px solid transparent;
