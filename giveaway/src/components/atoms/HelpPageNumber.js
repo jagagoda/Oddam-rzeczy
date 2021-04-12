@@ -7,7 +7,7 @@ const HelpPageNumber = ({paginate, number, currentPage}) => {
     }
     return (
         <li key={number} className="help__pagination-item">
-            <a onClick={() => paginate(number)} className={clsName}>
+            <a href="/" onClick={() => paginate(number)} className={clsName}>
                 {number}
             </a>
         </li>

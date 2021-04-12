@@ -4,17 +4,23 @@ import NavBar from "./NavBar";
 import React from "react";
 import '../../scss/login-page/_login.scss';
 import '../../scss/home-page/_dashboard.scss';
+import {NavLink} from "react-router-dom";
 
 const Dashboard = () => {
     return (
-        <section className="logout">
-            <LoginBar />
-            <NavBar />
-            <Title mainText="Successful logout" />
-            <div className="logout__btn">
-                <button className="btn logout__button">Home page</button>
-            </div>
-        </section>
+        <>
+            <LoginBar/>
+            <NavBar/>
+            <section className="logout">
+                <Title mainText="Successful logout"/>
+                <div className="logout__btn">
+                    <NavLink to="/" className="btn logout__button">
+                        Home page
+                    </NavLink>
+                </div>
+            </section>
+        </>
+
     );
 };
 

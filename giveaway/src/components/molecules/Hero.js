@@ -7,10 +7,12 @@ const Hero = ({to}) => {
         <section className="hero__container">
             <div className="hero__text">
                 <Title mainText='Start to help!' text='Give away unwanted stuff'/>
-                <Button to={to} text='Give away things'>
-                    <p>Give<br/> away <br/>things</p>
-                </Button>
-                <Button to={to} text='Organize a collection'/>
+                <div className="hero__buttons">
+                    <Button to="/donate" text='Give away things'>
+                        <p>Give<br/> away <br/>things</p>
+                    </Button>
+                    <Button to="/donate" text='Organize a collection'/>
+                </div>
             </div>
         </section>
     );

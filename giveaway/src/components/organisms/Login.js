@@ -1,83 +1,69 @@
+import React from 'react';
 import Title from "../atoms/Title";
 import {Formik, Form} from 'formik';
 import {TextInput} from "../atoms/FormLib";
 import * as Yup from 'yup';
-import LoginBar from "./LoginBar";
-import NavBar from "./NavBar";
+import LoginBar from "../molecules/LoginBar";
+import NavBar from "../molecules/NavBar";
 import '../../scss/home-page/_signup.scss';
-import React, { useRef } from 'react';
-import {useHistory} from 'react-router-dom';
+import '../../scss/login-page/_login.scss';
 
-const SignUp = () => {
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const passwordRepeatRef = useRef();
 
+import { useHistory } from 'react-router-dom';
+
+const Login = () => {
     const history = useHistory();
+
     return (
         <section className='form'>
-            <LoginBar/>
-            <NavBar/>
-            <Title mainText="Sign up"/>
+            <LoginBar />
+            <NavBar />
+            <Title mainText="Login"/>
             <div className='signup__form'>
                 <Formik
+                    className="formik"
                     initialValues={{
                         email: "",
                         password: "",
-                        repeatPassword: "",
                     }}
                     validationSchema={
                         Yup.object({
-                            email: Yup.string()
-                                .email("Invalid email address")
+                            email: Yup.string().email("Invalid email address")
                                 .required("Required"),
                             password: Yup.string()
                                 .min(6, "Password is too short")
                                 .max(20, "Password is too long")
                                 .required("Required"),
-                            repeatPassword: Yup.string()
-                                .required("Required").oneOf([Yup.ref("password")], "Passwords must much")
-                        })}
-                    onSubmit={(values) => {
+                        })
+                    }
+                    onSubmit={(values, {setSubmitting, setFieldError}) => {
                         console.log(values);
-
                     }}
                 >
-                    {() => (
+                    {({isSubmitting}) => (
                         <Form className="form__inputs">
                             <TextInput
                                 name="email"
                                 type="text"
                                 label="Email"
                                 placeholder="abc@xyz.com"
-                                ref={emailRef}
-                                required
                             />
 
                             <TextInput
                                 name="password"
                                 type="password"
                                 label="Password"
-                                ref={passwordRef}
-                                required
-                            />
-                            <TextInput
-                                name="repeatPassword"
-                                type="password"
-                                label="Repeat password"
-                                ref={passwordRepeatRef}
-                                required
                             />
                         </Form>
                     )}
                 </Formik>
                 <div className="signup__buttons">
-                    <button onClick={()=> history.push("/login")}  className=" signup__btn">Login</button>
-                    <button  onClick={()=> history.push("/donate")} className=" signup__btn">Sign up</button>
+                    <button onClick={()=> history.push("/signup")} type="submit"  className="signup__btn">Sign up</button>
+                    <button  onClick={()=> history.push("/donate")} type="submit"  className="signup__btn">Login</button>
                 </div>
             </div>
         </section>
     );
 };
 
-export default SignUp
+export default Login;

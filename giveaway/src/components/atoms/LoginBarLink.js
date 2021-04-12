@@ -1,9 +1,11 @@
-import { NavLink } from 'react-router-dom';
-const LoginBarLink = ({ text, path }) => {
+import { Link } from 'react-router-dom';
+import React from 'react';
+
+const LoginBarLink = ({text, path}) => {
     return (
-        <NavLink to={path}>
-            {text}
-        </NavLink>
+            <Link to={path}>
+                {text}
+            </Link>
     );
-}
+};
 export default LoginBarLink;

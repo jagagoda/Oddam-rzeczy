@@ -26,8 +26,8 @@
   form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-right: 17rem;
+    justify-content: flex-end;
+    padding-right: 10rem;
 
     .bottom__form {
       display: flex;
